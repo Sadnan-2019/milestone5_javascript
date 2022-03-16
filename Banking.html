@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-16">
+        Lets get <span class="text-rose-900">Some Money</span>
+      </h1>
+    </header>
+    <main class="max-auto">
+      <section class="mt-10">
+        <div class="grid grid-cols-3 gap-4 mx-auto w-3/4 p-8">
+          <div class="bg-red-300 rounded p-8">
+            <h2 class="text-1xl font-bold">Deposit</h2>
+            <h3 class="text-3xl" >$<span id="deposit-total">00</span></h3>
+          </div>
+          <div class="bg-green-300 rounded p-8">
+            <h2 class="text-1xl font-bold">Withdraw</h2>
+            <!-- <h3 class="text-3xl">$000</h3> -->
+            <h3 class="text-3xl" >$<span id="withdraw-total">00</span></h3>
+
+          </div>
+          <div class="bg-sky-300 rounded p-8">
+            <h2 class="text-1xl font-bold">Balance</h2>
+            <h3 class="text-3xl" >$<span id="total-amount">500</span></h3>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid grid-cols-2 gap-4 p-2 mx-auto w-3/4">
+          <div class="bg-red-300 rounded p-8">
+            <h3 class="text-2xl mb-10">Please Deposit your money</h3>
+
+            <input
+              type="text"
+              class="px-8 border rounded block"
+              id="deposit-money"
+              placeholder="Please Eniter Amount"
+            />
+            <button
+              class="p-2 rounded my-5 font-bold"
+              style="background-color: white"
+              id="deposit-btn"
+            >
+              Deposit
+            </button>
+          </div>
+          <div class="bg-green-300 rounded p-8">
+            <h3 class="text-2xl mb-10">Please Withdraw your money</h3>
+
+            <input
+              type="text "
+              class="px-8 border rounded block"
+              id="withdraw-money"
+              placeholder="Please Eniter Amount"
+            />
+            <button
+              class="p-2 rounded my-5 font-bold"
+              style="background-color: white"
+              id="withdraw-btn"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/BankCalculation.js"></script>
+  </body>
+</html>

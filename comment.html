@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Your Comments</h2>
+        <div id="main-container">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+            dolorum tenetur fuga nisi dolores provident ab exercitationem. Iusto
+            nemo omnis ratione libero nostrum dolor corporis optio officiis
+            maiores, rem consequuntur?
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+            dolorum tenetur fuga nisi dolores provident ab exercitationem. Iusto
+            nemo omnis ratione libero nostrum dolor corporis optio officiis
+            maiores, rem consequuntur?
+          </p>
+</div>
+
+          <div>
+            <textarea id="my-comment" cols="60" rows="4"> </textarea>
+            <br />
+
+            <button id="post-comment">Post</button>
+          </div>
+       
+      </section>
+    </main>
+
+    <script>
+      //1 ADD EVENTLISTNER
+      document
+        .getElementById("post-comment")
+        .addEventListener("click", function () {
+          // console.log("clicked");
+          //2 GET THE COMMENT
+          const Mycomment = document.getElementById("my-comment");
+          // console.log(Mycomment);
+          // const SaveComment=Mycomment.value;
+          // console.log(SaveComment);
+          //  3 create element
+          const newComment = document.createElement("p");
+          newComment.innerText = Mycomment.value;
+          //4 appned with parent
+          const CommentContainer = document.getElementById("main-container");
+          CommentContainer.appendChild(newComment);
+        });
+    </script>
+  </body>
+</html>

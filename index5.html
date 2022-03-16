@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>money-master</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="money.css">
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <h1 class="text-center p-4">Money Heist</h1>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <img src="img/photo.jpg" class="img-fluid rounded" alt="" />
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <h1 class="text-center">Income</h1>
+
+            <div class="mb-3 d-flex p-2">
+             <span class="px-2">Income</span> 
+              <input
+                type="number"
+                class="form-control"
+                id="income-amount"
+                placeholder="Enter your income"
+              />
+              
+            </div>
+            <p class="notify  " id="income-error"   >
+              Please Input Valid Income Value
+            </p>
+            <h3 class="text-center">Expence</h3>
+
+            <div class="mb-3 d-flex p-2">
+              <span class="px-2">Food</span> 
+
+              <!-- <label for="exampleInputPassword1" class="form-label"></label> -->
+              <input
+                type="number"
+                id="food-amount"
+                class="form-control"
+                placeholder="Enter your food"
+              />
+              
+            </div>
+            <p class="notify" id="food-error"  >
+              Please Input Valid Food Value
+            </p>
+
+            <div class="mb-3 d-flex p-2">
+              <span class="px-2">Rent</span>
+              <input
+                type="number"
+                id="rent-amount"
+                class="form-control"
+                placeholder="Enter your rent"
+              />
+              
+            </div>
+            <p class="notify" id="rent-error"  >
+              Please Input Valid Food Value
+            </p>
+
+            <div class="mb-3 d-flex p-2">
+              <span class="px-2">Clothes</span>
+              <input
+                type="number"
+                id="cloth-amount"
+                class="form-control"
+                placeholder="Enter your clothe"
+              />
+              
+            </div>
+            <p class="notify" id="cloth-error" >
+              Please Input Valid Clothe Value
+            </p>
+
+            <button
+              type="submit"
+              class="btn btn-primary mx-5 "
+              id="calculte"
+            >
+              Calculate
+            </button>
+
+            <p class="text-center notify  " id="total-over-expence" >
+                Not Enough Your Income From Expence
+            </p>
+
+            <h3 class="text-center">
+              Total Expence : <span id="total-expence">0000</span>
+            </h3>
+            <h3 class="text-center">
+              Balance : <span id="total-balance">0000</span>
+            </h3>
+
+            <div class="row">
+              <div class="col-lg-12 d-flex">
+                <label for="" class=" ">Saving Amount:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Saving-amount"
+                  id="saving-amount"
+                />
+                <p class="  ">
+                  <span id="saving-amount-error"  > </span>
+              </p>
+                <span class="mx-2"  >%</span>
+                <button
+                  type="submit"
+                  class="btn btn-primary mx-4"
+                  id="after-saving"
+                >
+                  Saving
+                </button>
+              </div>
+              <!-- <h5 class="text-center my-4">Saving Amount: 2000 </h5> -->
+              <p class="text-center notify" id="total-over-savings">
+                 Not Enough Your Balance  
+            </p>
+              <h3 class="text-center my-1">
+                Saving Amount: <span id="total-saving-amout">0000</span>
+              </h3>
+
+              <!-- <h5 class="text-center" >20 </h5> -->
+              <h3 class="text-center my-1">
+                Remaining Balance: <span id="remaining-balanace">0000</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="money.js"></script>
+  </body>
+</html>

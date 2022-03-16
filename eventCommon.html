@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+          <h1>Most common ways to set Event Handlers</h1>
+    <p id="click-method"></p>
+
+    <input type="text" id="name-field" />
+    <button id="update">Update</button>
+    <button onclick="JustFunction()">just function</button>
+    <button id="direct-event">Direct add eventlisnter</button>
+
+    <script>
+      function JustFunction() {
+        const clickMethod = document.getElementById("click-method");
+        // console.log(clickMethod);
+
+        clickMethod.innerText = "Just the function call";
+        clickMethod.style.color = "red";
+      }
+
+      document
+        .getElementById("direct-event")
+        .addEventListener("click", function () {
+          const directClickMethod = document.getElementById("click-method");
+          directClickMethod.innerText = "directy add eventlister";
+          directClickMethod.style.color = "blue";
+        });
+
+      document.getElementById("update").addEventListener("click", function () {
+        const nameField = document.getElementById("name-field");
+        const p = document.getElementById("click-method");
+        p.innerText = nameField.value;
+
+        nameField.value = "";
+      });
+    </script>
+  </body>
+</html>

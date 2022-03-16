@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Babul vi</h1>
+
+    <section id="section-container">
+      <h4>be aware of babul vai</h4>
+
+      <ul id="list-container">
+        <li>Blog-1</li>
+        <li id="second-item">Blog-2</li>
+        <li>Blog-3</li>
+        <li>Blog-4</li>
+        <li>Blog-5</li>
+      </ul>
+    </section>
+
+    <script>
+      document
+        .getElementById("second-item")
+        .addEventListener("click", function (event) {
+          console.log("click second item");
+          event.stopImmediatePropagation();
+        });
+      document
+        .getElementById("second-item")
+        .addEventListener("click", function (event) {
+          console.log("click second1 item");
+           
+        });
+      document
+        .getElementById("second-item")
+        .addEventListener("click", function (event) {
+          console.log("click second2 item");
+           
+        });
+      document
+        .getElementById("second-item")
+        .addEventListener("click", function (event) {
+          console.log("click second3 item");
+           
+        });
+
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function (event) {
+          console.log("ul list-container click  ");
+          event.stopPropagation();
+        });
+        
+      document
+        .getElementById("section-container")
+        .addEventListener("click", function () {
+          console.log("section-container   click  ");
+
+        });
+    </script>
+  </body>
+</html>

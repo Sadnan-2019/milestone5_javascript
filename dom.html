@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+   
+  </head>
+  <body>
+    <header>
+      <h1>Our Blog</h1>
+    </header>
+
+    <main>
+      <section id="blogs">
+
+          <header>
+                    <ul id="ul-list">
+                              <li>Blog-1</li>
+                              <li>Blog-2</li>
+                              <li>Blog-3</li>
+                              <li>Blog-4</li>
+                    </ul>
+          </header>
+        <!-- articale*3>h3{My Awesome Blog-$}+p>lorem -->
+        <article class="blog">
+          <h3 id="first-articale">My Awesome Blog-1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+            quis dignissimos qui quos error voluptate, consectetur tempore
+            itaque recusandae laudantium placeat quia? Quia adipisci deleniti
+            odit eligendi doloribus unde esse.
+          </p>
+        </article>
+        <article class="blog">
+          <h3>My Awesome Blog-2</h3>
+          <p id="second-articale">
+            Assumenda eligendi enim ex nostrum impedit alias, illo accusantium
+            eos atque quaerat error aliquid id, officiis, similique deserunt.
+            Esse blanditiis quis eveniet dolore, vel praesentium porro fugit
+            nulla qui debitis.
+          </p>
+        </article>
+        <article class="blog">
+          <h3 id="thired-articale">My Awesome Blog-3</h3>
+          <p>
+            Perferendis cum ab aliquam est voluptas iusto alias. Non esse nemo
+            perferendis, quibusdam minus quos iure molestiae iusto officia
+            nesciunt unde ratione cum velit, expedita enim facere, provident
+            sint? Repellendus?
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      const students = { name: "rohiom", age: 18, color: "red" };
+      //       console.log(document.body);
+      const blogTitle = document.getElementsByTagName("h3");
+      for (const h3 of blogTitle) {
+        // console.log(h3.innerText);
+      }
+      const blogDetails = document.getElementsByTagName("p");
+      for (const p of blogDetails) {
+        // console.log(p.innerText);
+      }
+
+  
+
+      const firstArticale = document.getElementById("first-articale");
+      firstArticale.style.backgroundColor = "salmon";
+      firstArticale.style.textAlign = "center";
+      firstArticale.setAttribute=("title","how are you");
+
+      const secondArticale = document.getElementById("second-articale");
+      secondArticale.style.backgroundColor = "#00FF00";
+      secondArticale.style.textAlign = "center";
+      
+
+      const thiredArticale = document.getElementById("thired-articale");
+      thiredArticale.style.backgroundColor = "#00ffff";
+      thiredArticale.style.textAlign = "center";
+      thiredArticale.innerText = "Bnagladesh";
+      thiredArticale.style.border = "5px dotted red";
+
+      const li = document.createElement('li');
+      li.innerText ="Blog-5";
+
+      const ul = document.getElementById('ul-list');
+
+
+      ul.appendChild(li);
+
+
+
+      const article=document.createElement("article");
+      article.classList.add('blog')
+      /* const h3 =document.createElement('h3');
+      h3.innerText ="My Awasome Blog";
+      const p = document.createElement("p");
+      p.innerText=("Perferendis cum ab");
+
+
+      article.appendChild(h3);
+      article.appendChild(p) */
+
+      article.innerHTML=`
+      
+      <h3>My Awasome Blog</h3>
+      <p>Perferendis cum ab</p>
+      `
+
+
+     const parentArticle=document.getElementById("blogs");
+     parentArticle.appendChild(article);
+
+
+     const allBlogs = document.getElementsByClassName("blog");
+
+for (const allBlog of allBlogs) {
+  // console.log(allBlog)
+  // allBlog.style.border ="5px solid yellow";
+  // allBlog.style.margin='20px';
+  allBlog.style.padding = "10px";
+  allBlog.style.margin = "10px";
+  allBlog.style.border = "2px solid   blue";
+  allBlog.style.borderRadius= "10px";
+}
+
+
+    </script>
+  </body>
+</html>
